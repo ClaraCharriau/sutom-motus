@@ -1,9 +1,10 @@
-<section *ngIf="!isUserLogged">
+<!-- <section *ngIf="!isUserLogged">
   <app-login-form (newUserEvent)="startGame()"></app-login-form>
-</section>
+</section> -->
 
-<section *ngIf="isUserLogged">
+<!-- <section *ngIf="isUserLogged"> -->
+  <section>
   <app-header></app-header>
-  <app-game-board></app-game-board>
-  <app-keyboard></app-keyboard>
+  <app-game-board [userInput]="input"></app-game-board>
+  <app-keyboard (newUserSubmission)="getInput($event)"></app-keyboard>
 </section>

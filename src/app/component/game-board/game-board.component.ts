@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { WordService } from '../../service/word-service/word.service';
 
 @Component({
   selector: 'app-game-board',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class GameBoardComponent {
 
+  secretWordLetters!: string[];
+  @Input() userInput?: string[];
+
+  constructor(private wordService: WordService) {}
+
+  ngOnInit(): void {
+    this.secretWordLetters = this.wordService.getSecretWordLetters();
+  }
 }

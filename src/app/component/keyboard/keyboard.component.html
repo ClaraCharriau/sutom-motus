@@ -1,3 +1,7 @@
-<ul>
-    <li><button>lettre</button></li>
-</ul>
+<div class="keyboard-box">
+  <button class="key-button" *ngFor="let letter of keyboard" (click)="addKey(letter)" >
+    {{ letter }}
+  </button>
+  <button class="key-button" (click)="clear()">Supprimer</button>
+  <button class="key-button" (click)="submit()">Valider</button>
+</div>

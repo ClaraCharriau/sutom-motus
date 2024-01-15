@@ -1,0 +1,15 @@
+table {
+  border-collapse: collapse;
+}
+
+.board-blue-box {
+  background-color: #0177c7;
+  color: white;
+  border: 1px solid #fff;
+  width: 63px;
+  height: 63px;
+  text-align: center;
+  font-family: Sofia Sans;
+  font-size: 39px;
+  text-transform: uppercase;
+}
