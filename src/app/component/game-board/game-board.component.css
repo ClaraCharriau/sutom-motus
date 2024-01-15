@@ -1,24 +1,32 @@
+.game-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
 table {
   border-collapse: collapse;
-  background-color: #0177c7;
+  background-color: var(--blue);
 }
 
 td {
   color: white;
   border: 1px solid #fff;
-  width: 63px;
-  height: 63px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   font-family: Sofia Sans;
-  font-size: 39px;
+  font-size: 34px;
   text-transform: uppercase;
 }
 
 .board-red-box, .current-input:first-of-type {
-  background-color: #E70029;
+  background-color: var(--red)
 }
 
 .yellow-circle {
-  background-color: #FFBD01;
+  background-color: var(--yellow);
   border-radius: 50%;
 }

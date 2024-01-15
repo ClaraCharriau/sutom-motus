@@ -1,9 +1,16 @@
-<section *ngIf="isUserLogged; else guest">
+<main *ngIf="isUserLogged; else guest">
   <app-header></app-header>
-  <app-game-board [userInput]="input" [user]="user!"></app-game-board>
-  <app-keyboard (newUserSubmission)="getInput($event)" (user)="updateUser()"></app-keyboard>
-</section>
+  <div>
+    <app-game-board [userInput]="input" [user]="user!"></app-game-board>
+    <app-keyboard
+      (newUserSubmission)="getInput($event)"
+      (user)="updateUser()"
+    ></app-keyboard>
+  </div>
+</main>
 
 <ng-template #guest>
-  <app-login-form (newUserEvent)="startGame()"></app-login-form>
+  <section>
+    <app-login-form (newUserEvent)="startGame()"></app-login-form>
+  </section>
 </ng-template>

@@ -1,4 +1,26 @@
+.keyboard-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 50px auto;
+    width: 60%;
+}
+
 .key-button {
-    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-size: 27px;
+    background-color: var(--dark-grey);
+}
+
+.clear, .submit {
+    width: 160px;
     min-height: 60px;
+    text-transform: uppercase;
+    border-radius: 80px;
+    font-size: 20px;
+    background-color: var(--dark-grey);
 }

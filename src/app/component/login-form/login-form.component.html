@@ -1,8 +1,10 @@
-<h1>MOMOMOTUS</h1>
-<span>🟥 🟡 🟦</span>
+<h1 class="title">MOMOMOTUS</h1>
+<div class="logo">🟥 🟡 🟦</div>
 
-<div>
-    <p>Pour commencer, quel est ton prénom ?</p>
-    <input type="text" id="nameInput" #nameInput/>
+<div class="input-box">
+  <p>Pour commencer, quel est ton prénom ?</p>
+  <div class="field">
+    <input type="text" id="nameInput" #nameInput />
     <button (click)="startGame(nameInput)" type="submit">Let's go</button>
+  </div>
 </div>

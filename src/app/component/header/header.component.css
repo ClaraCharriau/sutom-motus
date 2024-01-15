@@ -2,9 +2,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+hr {
+    margin: 10px 0;
 }
 
 .question-mark {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
