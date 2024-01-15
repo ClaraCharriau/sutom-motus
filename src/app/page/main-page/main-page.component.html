@@ -1,10 +1,9 @@
-<body>
-    <section>
-        <app-login-form></app-login-form>
-    </section>
+<section *ngIf="!isUserLogged">
+  <app-login-form (newUserEvent)="startGame()"></app-login-form>
+</section>
 
-    <section>
-        <app-header></app-header>
-        <app-game-board></app-game-board>
-    </section>
-</body>
+<section *ngIf="isUserLogged">
+  <app-header></app-header>
+  <app-game-board></app-game-board>
+  <app-keyboard></app-keyboard>
+</section>

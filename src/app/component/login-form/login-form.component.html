@@ -3,6 +3,6 @@
 
 <div>
     <p>Pour commencer, quel est ton prénom ?</p>
-    <input type="text"/>
-    <button>Let's go</button>
+    <input type="text" id="nameInput" #nameInput/>
+    <button (click)="startGame(nameInput)" type="submit">Let's go</button>
 </div>
