@@ -1,5 +1,6 @@
 table {
   border-collapse: collapse;
+  background-color: #0177c7;
 }
 
 td {
@@ -13,11 +14,11 @@ td {
   text-transform: uppercase;
 }
 
-.board-blue-box {
-  background-color: #0177c7;
-  
+.board-red-box, .current-input:first-of-type {
+  background-color: #E70029;
 }
 
-.board-red-box {
-  background-color: #E70029;
+.yellow-circle {
+  background-color: #FFBD01;
+  border-radius: 50%;
 }

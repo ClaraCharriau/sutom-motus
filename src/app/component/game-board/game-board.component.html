@@ -1,23 +1,37 @@
 
 <table>
     <tbody>
-      <tr>
-        <td class="board-blue-box" *ngFor="let letter of userInput">{{letter}}</td>
+
+      <!-- les parties passées -->
+      <tr *ngIf="user!.attempts[0]">
+        <td [class.board-red-box]="letter.isInRightPlace" [class.yellow-circle]="letter.isPresent && !letter.isInRightPlace" *ngFor="let letter of user.attempts[0].input">{{letter.value}}</td>
       </tr>
-      <tr>
-        <td class="board-blue-box" *ngFor="let letter of userInput">{{letter}}</td>
+
+      <tr *ngIf="user!.attempts[1]">
+        <td [class.board-red-box]="letter.isInRightPlace" [class.yellow-circle]="letter.isPresent && !letter.isInRightPlace"  *ngFor="let letter of user.attempts[1].input">{{letter.value}}</td>
       </tr>
-      <tr>
-        <td class="board-blue-box" *ngFor="let letter of userInput">{{letter}}</td>
+
+      <tr *ngIf="user!.attempts[2]">
+        <td [class.board-red-box]="letter.isInRightPlace" [class.yellow-circle]="letter.isPresent && !letter.isInRightPlace"  *ngFor="let letter of user.attempts[2].input">{{letter.value}}</td>
       </tr>
-      <tr>
-        <td class="board-blue-box" *ngFor="let letter of userInput">{{letter}}</td>
+
+      <tr *ngIf="user!.attempts[3]">
+        <td [class.board-red-box]="letter.isInRightPlace" [class.yellow-circle]="letter.isPresent && !letter.isInRightPlace"  *ngFor="let letter of user.attempts[3].input">{{letter.value}}</td>
       </tr>
-      <tr>
-        <td class="board-blue-box" *ngFor="let letter of userInput">{{letter}}</td>
+
+      <tr *ngIf="user!.attempts[4]">
+        <td [class.board-red-box]="letter.isInRightPlace" [class.yellow-circle]="letter.isPresent && !letter.isInRightPlace"  *ngFor="let letter of user.attempts[4].input">{{letter.value}}</td>
       </tr>
+
+      <!-- La partie en cours -->
       <tr>
-        <td class="board-blue-box" *ngFor="let letter of userInput">{{letter}}</td>
+        <td class="current-input" *ngFor="let letter of userInput">{{letter}}</td>
       </tr>
+
+      <!-- Blocs vides -->
+      <tr *ngFor="let round of getRemainingRound()">
+        <td *ngFor="let letter of secretWord"></td>
+      </tr>
+
     </tbody>
   </table>

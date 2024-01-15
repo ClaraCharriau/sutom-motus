@@ -1,4 +1,14 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;1000&display=swap");
+
 body {
-    background: #2B2B2B;
-    color: white;
+  background: #2b2b2b;
+  color: white;
+  font-family: Sofia Sans;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: Sofia Sans;
+  font-weight: 1000;
 }

@@ -27,6 +27,17 @@ export class GameService {
   startGame() {
     this.secretWordLetters = this.wordService.getSecretWordLetters();
     this.emptyInput = this.getEmptyInput();
+    this.getRound();
+  }
+
+  getRound() {
+    const user = this.userService.getUser();
+    if(user !== null && user.attempts.length > 0) {
+      this.round = user.attempts.length;
+    } else {
+      this.round = 1;
+    }
+    return this.round;
   }
 
   submitInput(userInput: string[]) {

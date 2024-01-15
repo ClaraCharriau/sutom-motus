@@ -8,6 +8,7 @@ import { GameService } from '../../service/game-service/game.service';
 })
 export class KeyboardComponent {
   @Output() newUserSubmission = new EventEmitter();
+  @Output() user = new EventEmitter();
 
   constructor(private gameService: GameService) {}
 
@@ -18,6 +19,7 @@ export class KeyboardComponent {
   ngOnInit() {
     this.pressedKeys = this.gameService.getEmptyInput();
     this.newUserSubmission.emit(this.pressedKeys);
+    this.user.emit();
   }
 
   addKey(key: string) {
@@ -38,10 +40,12 @@ export class KeyboardComponent {
     this.pressedKeys = this.gameService.getEmptyInput();
     this.count = 1;
     this.newUserSubmission.emit(this.pressedKeys);
+    this.user.emit();
   }
 
   submit() {
-    console.log("je tente le mot : " + this.pressedKeys);
     this.gameService.submitInput(this.pressedKeys);
+    this.user.emit();
+    this.clear();
   }
 }
