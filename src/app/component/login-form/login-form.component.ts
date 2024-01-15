@@ -19,7 +19,6 @@ export class LoginFormComponent {
   }
 
   logUser(nameInput: string): void {
-    this.userService.logUser(nameInput.trim());
+    this.userService.createUser(nameInput.trim());
   }
-
 }

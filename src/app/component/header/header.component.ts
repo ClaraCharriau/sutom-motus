@@ -7,12 +7,20 @@ import { UserService } from '../../service/user-service/user.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Input() username!: string;
-
   constructor(private userService: UserService) {}
 
+  username!: string;
+
   ngOnInit() {
-    this.username = this.userService.username;
+    this.username = this.getUsername();
+  }
+
+  getUsername(): string {
+    const user = this.userService.getUser();
+    if(user !== null) {
+      return user.username;
+    }
+    return "error"
   }
 
 }

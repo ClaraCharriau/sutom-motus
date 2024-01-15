@@ -2,8 +2,7 @@ table {
   border-collapse: collapse;
 }
 
-.board-blue-box {
-  background-color: #0177c7;
+td {
   color: white;
   border: 1px solid #fff;
   width: 63px;
@@ -12,4 +11,13 @@ table {
   font-family: Sofia Sans;
   font-size: 39px;
   text-transform: uppercase;
+}
+
+.board-blue-box {
+  background-color: #0177c7;
+  
+}
+
+.board-red-box {
+  background-color: #E70029;
 }
